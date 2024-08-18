@@ -5,33 +5,41 @@ import UserManagement from './components/UserManagement';
 import Scheduler from './components/Scheduler';
 import './App.css';
 import Header from './components/Header';
-
+import Sidebar from './components/SideNavbar';
 
 
 function App() {
   return (
-    <div className="chirag">
+    <body>
       <Header />
-      <h1 className="heading">Conference Video Calling App</h1>
-      <Chat />
-      <UserManagement />
-      <Scheduler />
-      <Sidebar /> <Sidebar />
-      <VideoCall />
-     
-    </div>
+      <div className="Sidebar">
+        <Sidebar />
+      </div>
+
+      <section className='Body'>
+
+        <h1 className="heading">Conference Video Calling App</h1>
+        <Chat />
+        <UserManagement />
+        <Scheduler />
+        <VideoCall />
+      </section>
+    </body>
   );
 }
 
 export default App;
 
-function Sidebar() {
-  return (
-    <div>
-      <h1>HEY BILLIONAIRE...</h1>
-    </div>
-  );
+//-======================================SIDE NAVBAR SECTION STARTS=============================-
+const listItems = document.querySelectorAll('.list');
+
+function activelink() {
+    listItems.forEach(item => item.classList.remove('active'));
+    this.classList.add('active');
 }
+
+listItems.forEach(item => item.addEventListener('click', activelink));
+
 
 
 

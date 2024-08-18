@@ -37,14 +37,9 @@
   }
 }
 
+
+
 /*the body styling starts: the heading chirag div*/
-.chirag{
-  background-color: #aa7ecb;
-}
-
-
-
-
 
 /*header styling starts*/
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
@@ -56,6 +51,8 @@
     --light-white: #aaa;
     --black: #3d3d3d;
     --light-bg: #4b4b4b;
+    --clr: #222327;
+    --active-color: #29fd53;
 }
 
 * {
@@ -95,12 +92,23 @@ html {
   
 }
 
+/*that body tag of html of app.js to control the main body rather than the header and sidebar*/
+.Body{
+  margin-top: 6rem;
+  margin-left: 5.3rem;
+  background-color: var(--black)
+}
 
+.Sidebar{
+  position: fixed;
+  margin-left: 0;
+  transform: translateY(-6rem);
+}
 
 .header .flex .navbar{ 
   display: flex;
   margin-right:-63rem;
-  padding: 0.3rem;
+  padding: -0.5rem;
 }
 
 /* that hover drawer section */
@@ -145,38 +153,40 @@ html {
   top: 0; left: 0; right: 0;
   z-index: 1000;
   background-color: var(--light-bg);
-  height:50px ;
+  height:6rem;
+  position: fixed;
+  z-index: 1000;
 }
 
 .header .flex{
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-top: 7px;
+  margin-bottom: 10px;
 }
 
 
 
 .header .flex .logo{
-  font-size: 3rem;
-  color: var(--green);
+  font-size: 3.5rem;
+  color: var(--white);
   font-family: "Black Ops One", system-ui;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
-  margin-left: 2rem;
+  margin:0.9rem 0 0 2rem ;
 }
 
 .header .flex .navbar a{
   margin-left: 2rem;
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-decoration: none;
 }
 
 /*<!--download app btn section starts-->*/
 .app button{
-background-color:var(--green);
+background-color:var(--active-color);
 border: 1px solid #040404;
 box-shadow: 2px 2px 2px rgb(0, 0, 0);
 border-radius: 4px;
@@ -197,14 +207,128 @@ box-shadow: -1px 2px 5px rgb(9, 255, 0) ;
 }
 
 .app button:active{
-background-color: #22f4ab;
+background-color:#2fff00 ;
 }
 /*<!--download app btn section ends-->*/
 
 .header .flex .navbar a:hover{
   color: var(--green);
-  text-decoration: 1px underline;
+  text-decoration: 1px underline var(--active-color);
 }
+
+/*======================================SIDE NAVBAR SECTION STARTS=============================*/
+.navigation {
+  width: 5.3rem;
+  height: 120vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-0.89rem);
+  position:fixed;
+}
+
+.navigation ul {
+  transform: translateY(-8rem);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Distribute remaining space evenly */
+  gap: 20px; /* Adjust the space between each list item */
+}
+
+.navigation ul li {
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+  text-decoration: none;
+}
+
+.navigation ul li a .icon {
+  line-height: 90px;
+  font-size: 2.9rem;
+  transition: 0.6s;
+}
+
+.navigation ul li a .icon:hover{
+  transform: scale(1.2);
+  background-color: #29fd533c;
+  background-blend-mode: 20px;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.navigation ul li.active a .icon {
+  transform: translateY(-25px);
+}
+
+.navigation ul li a .text {
+  position: absolute;
+  font-size: 1.3em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(30px);
+  padding: 2px;
+}
+
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.indicator {
+  top: -1rem;
+  position: absolute;
+  width: 7rem;
+  height: 75px;
+  background: var(--active-color);
+  border-radius: 0 10px 10px 0;
+  border: 1px solid var(--clr);
+  transition: 0.5s;
+}
+
+
+
+.navigation ul li:nth-child(1).active ~ .indicator {
+  transform: translateY(calc(90px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator {
+  transform: translateY(calc(90px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator {
+  transform: translateY(calc(90px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator {
+  transform: translateY(calc(90px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator {
+  transform: translateY(calc(90px * 4));
+}
+
+.navigation ul li:nth-child(6).active ~ .indicator {
+  transform: translateY(calc(90px * 5));
+}
+
+/*======================================SIDE NAVBAR SECTION endS=============================*/
 /*header styling ENDS*/
 
 /*the body styling ENdS: the heading chirag div*/
