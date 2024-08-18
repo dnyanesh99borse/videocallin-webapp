@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #127a04;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,175 @@
     transform: rotate(360deg);
   }
 }
+
+/*the body styling starts: the heading chirag div*/
+.chirag{
+  background-color: #aa7ecb;
+}
+
+
+
+
+
+/*header styling starts*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+:root {
+    --green: #00E77F;
+    --white: #fff;
+    --light-white: #aaa;
+    --black: #3d3d3d;
+    --light-bg: #4b4b4b;
+}
+
+* {
+    font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+}
+
+*::selection {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:var(--green);
+  
+}
+
+
+
+.header .flex .navbar{ 
+  display: flex;
+  margin-right:-63rem;
+  padding: 0.3rem;
+}
+
+/* that hover drawer section */
+.dropdown-content {
+  margin-left: -5rem;
+  display: none;
+  position: absolute;
+  background-color:rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  height: 40rem;
+  width: auto;
+  border-radius: 2rem;
+  border: 1px solid rgb(57, 133, 199);
+  font-size:2rem;
+  overflow: scroll;
+}
+
+/* that hover drawer section */
+
+.dropdown-content li{
+  padding: 10px 13px;
+}
+.dropdown-content li:hover{
+  background-color: #00ff8c;
+  padding: 1rem;
+  border-radius: 6px 0 6px 0;
+  cursor:pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.header{
+  margin: 0;
+  padding: 0;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: var(--light-bg);
+  height:50px ;
+}
+
+.header .flex{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+}
+
+
+
+.header .flex .logo{
+  font-size: 3rem;
+  color: var(--green);
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.header .flex .navbar a{
+  margin-left: 2rem;
+  color: var(--white);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+/*<!--download app btn section starts-->*/
+.app button{
+background-color:var(--green);
+border: 1px solid #040404;
+box-shadow: 2px 2px 2px rgb(0, 0, 0);
+border-radius: 4px;
+width: 100px;
+height: 30px;
+margin: 1px 30px ;
+}
+
+.app button a{
+color: #040404;
+font-family:cursive;
+}
+
+.app button:hover{
+background-color: rgb(21, 210, 100);
+border: 1.5px solid #22ff00;
+box-shadow: -1px 2px 5px rgb(9, 255, 0) ;
+}
+
+.app button:active{
+background-color: #22f4ab;
+}
+/*<!--download app btn section ends-->*/
+
+.header .flex .navbar a:hover{
+  color: var(--green);
+  text-decoration: 1px underline;
+}
+/*header styling ENDS*/
+
+/*the body styling ENdS: the heading chirag div*/
