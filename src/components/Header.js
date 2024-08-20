@@ -29,6 +29,7 @@ function Header() {
       <header className="header">
         <section className="flex">
           <a href="#home" className="logo">
+            <img src=''></img>
             PASSLOG.
           </a>
           <nav className="navbar">

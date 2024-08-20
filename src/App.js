@@ -22,7 +22,7 @@ function App() {
         <Chat />
         <UserManagement />
         <Scheduler />
-        <VideoCall />
+        <VideoCall/>
       </section>
     </body>
   );
@@ -30,15 +30,7 @@ function App() {
 
 export default App;
 
-//-======================================SIDE NAVBAR SECTION STARTS=============================-
-const listItems = document.querySelectorAll('.list');
 
-function activelink() {
-    listItems.forEach(item => item.classList.remove('active'));
-    this.classList.add('active');
-}
-
-listItems.forEach(item => item.addEventListener('click', activelink));
 
 
 
