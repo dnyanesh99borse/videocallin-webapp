@@ -65,11 +65,11 @@ const VideoCall = () => {
 
           <div className='buttons'>
             <button className='camera' onClick={toggleVideo}>
-              <FontAwesomeIcon icon={videoEnabled ? faVideo : faVideoSlash} /> {videoEnabled ? '' : ''}  {/*here the single inverted commas for the text with the functioning 
+              <FontAwesomeIcon icon={videoEnabled ? faVideo : faVideoSlash} />  {/*here the single inverted commas for the text with the functioning 
                                                                                                        of the camera and audio remember*/}
             </button>
             <button className='mic' onClick={toggleAudio}>
-              <FontAwesomeIcon icon={audioEnabled ? faMicrophone : faMicrophoneSlash} /> {audioEnabled ? '' : ''}
+              <FontAwesomeIcon icon={audioEnabled ? faMicrophone : faMicrophoneSlash} /> {/*here change the access to video1 using the buttons for video2*/}
             </button>
           </div>
         </div>

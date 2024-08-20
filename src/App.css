@@ -58,7 +58,7 @@ html {
 .Body{
   margin-top: 6rem;
   margin-left: 4.3rem;
-  background-color:red;
+  background-color:var(--light-bg);
 }
 
 /* that hover drawer section */
@@ -305,23 +305,15 @@ background-color:#2fff00 ;
   display: flex;
 }
 .mainuser{
-  border: 5px solid var(--light-white);
+  border: 2px solid var(--clr);
   border-radius: 8rem;
   align-items: center;
   align-content: center;
-  margin:1rem 1rem 1rem  6rem;
-}
-
-.mainuser .camera:hover{
-  background-color: var(--light-white);
-}
-
-.mainuser .mic:hover{
-  background-color: var(--light-white);
+  margin:1rem 1rem 1rem  10rem;
 }
 
 .mainuser video{
-  border: 5px solid var(--active-color);
+  border: 2px solid var(--active-color);
   border-radius: 7rem;
   height: 30rem;
   margin: 1rem;
@@ -339,17 +331,24 @@ background-color:#2fff00 ;
   border-radius: 1rem 1rem;
 }
 
+.lobby .mainuser .buttons button:hover{
+  background-color: var(--light-white);
+  border: .5px solid var(--black);
+  box-shadow: 0px 1px 6px 3px var(--active-color);
+  transition: 0.1s;
+}
+
 .lobby .frontuser{
-  border: 5px solid var(--light-white);
+  border: 2px solid var(--clr);
   border-radius: 8rem;
   align-items: center;
   align-content: center;
-  margin:1rem 1rem 1rem  25rem;
+  margin:1rem 10rem 1rem  25rem;
   width: 43rem;
 }
 
 .lobby .frontuser .user{
-  border: 5px solid var(--active-color);
+  border: 2px solid var(--active-color);
   border-radius: 7rem;
   height: 29rem;
   width: 39.2rem;
@@ -364,10 +363,17 @@ background-color:#2fff00 ;
   border-radius: 1rem 1rem;
 }
 
+.lobby .frontuser .buttons button:hover{
+  background-color: var(--light-white);
+  border: .5px solid var(--black);
+  box-shadow: 0px 1px 6px 3px var(--active-color);
+}
 
 .frontuser .buttons{
   margin-left: 13.3rem;
 }
+
+
 
 /*videocall.js css styling section starts*/
 
@@ -378,13 +384,13 @@ background-color:#2fff00 ;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "cursive",sans-serif;
   justify-content: center;
-  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background:var(--black);
+  padding: 1.5rem;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.655);
   overflow: hidden;
-  color: #4a148c;
+  color:var(--green);
 }
 
 .animated-meet-3 {
@@ -425,15 +431,14 @@ background-color:#2fff00 ;
 
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 5px #b39ddb, 0 0 10px #7e57c2, 0 0 15px #5e35b1, 0 0 20px #311b92;
+    text-shadow: 0 0 5px #5f9b74, 0 0 10px #27c867, 0 0 15px #31c01e, 0 0 20px #00ff48;
   }
   50% {
-    text-shadow: 0 0 10px #9575cd, 0 0 20px #7e57c2, 0 0 30px #5e35b1, 0 0 40px #311b92;
+    text-shadow: 0 0 10px #5f9b74, 0 0 20px #27c867, 0 0 30px #31c01e, 0 0 40px #00ff48;
   }
 }
 
 .video-call-section p {
-  margin-top: 1rem;
+  margin-top: .4rem;
   font-size: 1.2rem;
-  color: #311b92;
 }
