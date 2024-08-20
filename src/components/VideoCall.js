@@ -32,17 +32,49 @@ const VideoCall = () => {
   };
 
   return (
-    <div className='mainuser'>
-      <video ref={localVideoRef} autoPlay playsInline />
-      <div>
-        <button onClick={toggleVideo}>
-          <FontAwesomeIcon icon={videoEnabled ? faVideo : faVideoSlash} /> {videoEnabled ? 'Camera On' : 'Camera Off'}
-        </button>
-        <button onClick={toggleAudio}>
-          <FontAwesomeIcon icon={audioEnabled ? faMicrophone : faMicrophoneSlash} /> {audioEnabled ? 'Mic On' : 'Mic Off'}
-        </button>
+    <>
+      <div className="video-call-section">
+        <h1 className="animated-meet-3">
+          <span className="animated-letter-3">M</span>
+          <span className="animated-letter-3">e</span>
+          <span className="animated-letter-3">e</span>
+          <span className="animated-letter-3">t</span>
+        </h1>
+        <p>Connect and collaborate with ease in our advanced video call platform.</p>
       </div>
-    </div>
+
+      <div className='lobby'>
+        <div className='mainuser'>
+          <video ref={localVideoRef} autoPlay playsInline />
+
+          <div className='buttons'>
+            <button className='camera' onClick={toggleVideo}>
+              <FontAwesomeIcon icon={videoEnabled ? faVideo : faVideoSlash} /> {videoEnabled ? '' : ''}  {/*here the single inverted commas for the text with the functioning 
+                                                                                                       of the camera and audio remember*/}
+            </button>
+            <button className='mic' onClick={toggleAudio}>
+              <FontAwesomeIcon icon={audioEnabled ? faMicrophone : faMicrophoneSlash} /> {audioEnabled ? '' : ''}
+            </button>
+          </div>
+        </div>
+
+        <div className='frontuser'>
+          <div className='user'>
+
+          </div>
+
+          <div className='buttons'>
+            <button className='camera' onClick={toggleVideo}>
+              <FontAwesomeIcon icon={videoEnabled ? faVideo : faVideoSlash} /> {videoEnabled ? '' : ''}  {/*here the single inverted commas for the text with the functioning 
+                                                                                                       of the camera and audio remember*/}
+            </button>
+            <button className='mic' onClick={toggleAudio}>
+              <FontAwesomeIcon icon={audioEnabled ? faMicrophone : faMicrophoneSlash} /> {audioEnabled ? '' : ''}
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
