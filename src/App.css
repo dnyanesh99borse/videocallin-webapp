@@ -232,12 +232,15 @@ background-color:#2fff00 ;
   transition: 0.5s;
 }
 
+.navigation ul li a .icon i:hover{
+  background-color: #00ff8c;
+  border-radius: 1rem .5rem;
+  contain-intrinsic-height: 2rem;
+  width: 4rem;
+  
+}
+
 .navigation ul li a .icon:hover{
-  transform: scale(1.1);
-  background-color:var(--light-white);
-  border-radius: 50%;
-  border-radius: 50px 50px 50px 50px;
-  background-size: cover;
 }
 
 .navigation ul li.active a .icon {
