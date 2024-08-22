@@ -40,7 +40,7 @@ const VideoCall = () => {
           <span className="animated-letter-3">e</span>
           <span className="animated-letter-3">t</span>
         </h1>
-        <p>Connect and collaborate with ease in our advanced video call platform.</p>
+        <p><span>" </span>Connect with ease, anytime, anywhere <span>"</span></p>
       </div>
 
       <div className='lobby'>

@@ -439,6 +439,11 @@ background-color:#2fff00 ;
 }
 
 .video-call-section p {
-  margin-top: .4rem;
-  font-size: 1.2rem;
+  margin-top: .1rem;
+  font-size: 1.6rem;
+}
+
+.video-call-section p span{
+  font-size: 2.3rem;
+  margin-top:3rem;
 }
