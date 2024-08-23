@@ -74,6 +74,9 @@ const VideoCall = () => {
           </div>
         </div>
       </div>
+
+      <button className='connect' title='create media'>connect</button>
+      <div className='names'></div>
     </>
   );
 };
